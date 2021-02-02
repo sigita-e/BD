@@ -71,7 +71,7 @@
         </div>
 
         <div>
-			<p><img id="contact-img" src="img/NBezborodovs.jpg"></p>
+			<p><img id="contact-img" src="img/blank-person-icon.jpg"></p>
 			<p class="text-center">Dr. Ņikita Bezborodovs</p>
 			<p class="text-center">Psihiatrs</p>
         </div>
