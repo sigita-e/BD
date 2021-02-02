@@ -14,8 +14,8 @@
                 <p>
                 
                 <div>
-                    <object data="UDHS_vadlinijas_2014.pdf" type="application/pdf" width="100%" height="720">
-                        <embed src="UDHS_vadlinijas_2014.pdf" type="application/pdf" />
+                    <object data="https://www.rsu.lv/sites/default/files/imce/Dokumenti/pnk/UDHS_vadlinijas_2014.pdf" type="application/pdf" width="100%" height="720">
+                        <embed src="https://www.rsu.lv/sites/default/files/imce/Dokumenti/pnk/UDHS_vadlinijas_2014.pdf" type="application/pdf" />
                     </object>
 
                 </div>
