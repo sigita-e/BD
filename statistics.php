@@ -82,6 +82,7 @@
 			<td>388098</td>
 			<td>0,26</td>
 		</tr>
+		</tbody>
 		</table>
 	</div>
 

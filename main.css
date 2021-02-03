@@ -55,13 +55,13 @@ nav {
     display: block;
 }
 
-
 .first-nav { 
-    background-color: var(--nav-background); 
-    /*box-shadow: 0 0 1px 5px white inset;*/
+    /*background-color: var(--nav-background);
+    box-shadow: 0 0 1px 5px white inset;*/
     margin-bottom: 0;
     border-bottom: 1px solid #e6e6e6;
 } 
+
 
 .second-nav {
     margin: 0;
@@ -152,7 +152,7 @@ nav {
     transition: all .5s ease;
 }
 
-/* navigācijas stils - default krāsu override */
+/* navigācijas stils - default krāsu override - navbar second */
 .navbar-default {
   background-color: var(--white);
   border-color: none;
@@ -270,6 +270,137 @@ nav {
   .navbar-default .navbar-nav .open .dropdown-menu > .active > a:focus {
     color: var(--link-orange-hover);
     background-color: var(--white);
+    padding: 5px 20px 5px 20px;
+    /*background-color:  var(--link-gray-hover);
+    border-radius: 25px;*/
+  }
+}
+
+
+
+
+/* navigācijas stils - default krāsu override - navbar first */
+.navbar-default-first {
+  background-color: var(--nav-background);
+  border-color: none;
+}
+.navbar-default-first .navbar-brand {
+  color: var(--link-gray-hover);
+}
+
+.navbar-default-first .navbar-brand:hover,
+.navbar-default-first .navbar-brand:focus {
+  color: var(--link-orange-hover);
+  /*background-color: var(--white);*/
+  /*background-color:  var(--link-gray-hover);
+  border-radius: 15px;*/
+}
+
+.navbar-default-first .navbar-text {
+  color: var(--link-gray-hover);
+}
+.navbar-default-first .navbar-nav > li > a {
+  color: var(--link-gray-hover);
+}
+.navbar-default-first .navbar-nav > li > a:hover,
+.navbar-default-first .navbar-nav > li > a:focus {
+  color: var(--link-orange-hover);
+  background-color: none;
+  /*background-color: var(--link-gray-hover);
+  border-radius: 15px;*/
+}
+.navbar-default-first .navbar-nav > li > .dropdown-menu {
+  background-color: var(--white);
+}
+.navbar-default-first .navbar-nav > li > .dropdown-menu > li > a {
+  color: var(--link-blue-lighter);
+}
+.navbar-default-first .navbar-nav > li > .dropdown-menu > li > a:hover,
+.navbar-default-first .navbar-nav > li > .dropdown-menu > li > a:focus {
+  color: var(--link-orange-hover);
+  background-color: var(--white);
+  /*background-color:  var(--link-gray-hover);
+  border-radius: 15px;*/
+}
+.navbar-default-first .navbar-nav > li > .dropdown-menu > li.divider {
+    background-color: var(--white);
+  /*background-color:  var(--link-gray-hover);
+  border-radius: 15px;*/
+}
+.navbar-default-first .navbar-nav .open .dropdown-menu > .active > a,
+.navbar-default-first .navbar-nav .open .dropdown-menu > .active > a:hover,
+.navbar-default-first .navbar-nav .open .dropdown-menu > .active > a:focus {
+  color: var(--link-orange-hover);
+  background-color: var(--white);
+  /*background-color: var(--link-gray-hover);
+  border-radius: 15px;*/
+}
+.navbar-default-first .navbar-nav > .active > a,
+.navbar-default-first .navbar-nav > .active > a:hover,
+.navbar-default-first .navbar-nav > .active > a:focus {
+  color: var(--link-orange-hover);
+  background-color: transparent;
+  /*background-color: var(--link-gray-hover);
+  border-radius: 15px;*/
+}
+.navbar-default-first .navbar-nav > .open > a,
+.navbar-default-first .navbar-nav > .open > a:hover,
+.navbar-default-first .navbar-nav > .open > a:focus {
+  color: var(--link-orange-hover);
+  background-color: transparent;
+ /* background-color: var(--link-gray-hover);
+  border-radius: 15px;*/
+}
+.navbar-default-first .navbar-toggle {
+    background-color: transparent;
+  /*background-color: var(--link-gray-hover);
+  border-radius: 15px;*/
+}
+.navbar-default-first .navbar-toggle:hover,
+.navbar-default-first .navbar-toggle:focus {
+    background-color: transparent;
+  /*background-color:  var(--link-gray-hover);
+  border-radius: 15px;*/
+}
+.navbar-default-first .navbar-toggle .icon-bar {
+  background-color: var(--link-blue-lighter);
+}
+.navbar-default-first .navbar-collapse,
+.navbar-default-first .navbar-form {
+  background-color: transparent;
+}
+.navbar-default-first .navbar-link {
+  color: var(--link-blue-lighter);
+}
+.navbar-default-first .navbar-link:hover {
+  color: var(--link-orange-hover);
+  background-color: transparent;
+  /*background-color: var(--link-gray-hover);
+  border-radius: 15px;*/
+}
+
+.nav > li > a:focus, .nav > li > a:hover {
+  background-color: transparent;
+}
+
+@media (max-width: 767px) {
+  .navbar-default-first .navbar-nav .open .dropdown-menu > li > a {
+    color: var(--link-blue-lighter);
+    padding: 5px 20px 5px 20px;
+  }
+  .navbar-default-first .navbar-nav .open .dropdown-menu > li > a:hover,
+  .navbar-default-first .navbar-nav .open .dropdown-menu > li > a:focus {
+    color: var(--link-orange-hover);
+    background-color: transparent;
+    padding: 5px 20px 5px 20px;
+    /*background-color: var(--link-gray-hover);
+    border-radius: 25px;*/
+  }
+  .navbar-default-first .navbar-nav .open .dropdown-menu > .active > a,
+  .navbar-default-first .navbar-nav .open .dropdown-menu > .active > a:hover,
+  .navbar-default-first .navbar-nav .open .dropdown-menu > .active > a:focus {
+    color: var(--link-orange-hover);
+    background-color: transparent;
     padding: 5px 20px 5px 20px;
     /*background-color:  var(--link-gray-hover);
     border-radius: 25px;*/
@@ -644,7 +775,8 @@ body {
 .bi-telephone,
 .bi-envelope,
 .bi-geo-alt,
-.bi-clock {
+.bi-clock,
+.bi-person-fill {
     margin-right: 8px;
 }
 
@@ -745,7 +877,8 @@ form {
 
 /* table label */ 
 
-label {
+label,
+th {
   font-weight:normal;
   margin-bottom: 3px;
   margin-top: 3px;
@@ -813,4 +946,11 @@ label {
 #password {
   width: 100%;
   padding: 8px;
+}
+
+
+/* user edit page */
+
+.btn-edit {
+    border-radius: 50%;
 }

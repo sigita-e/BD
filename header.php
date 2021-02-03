@@ -1,3 +1,8 @@
+<?php
+
+
+?>
+
 <html lang="lv">
   <head>
     <meta http-equiv="content-type" content="text/html" charset="UTF-8"/>
@@ -72,12 +77,41 @@ $(function(){
 
 <nav>
 <!--Navbar pirmais - autentificēšanās -->
- <div class="navbar first-nav">
+ <div class="navbar navbar-default-first first-nav">
  <div class="container">
-    <ul class="nav navbar-nav navbar-right pull-right">
+    <ul class="nav navbar-nav navbar-right">
     <li class="nav-item">
 
 <?php if(isset($_SESSION['id'])): ?>
+  <li><a href="login_page.php"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-fill" viewBox="0 0 16 16">
+  <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+  </svg><?php
+
+  class Name
+  {
+    public $id;
+      public $name;
+      public $surname;
+      public $personal_code;
+      public $email;
+  
+  }
+  
+  class ReadPersonalData
+  {
+    public static function readUserData($pdo, $user_id)
+      {
+          $statement = $pdo->prepare("SELECT id, name, surname, personal_code, email FROM users WHERE id = '$user_id'");
+          $statement->execute();
+  
+          $personalData = $statement->fetchAll(PDO::FETCH_CLASS, "Name");
+          return $personalData;
+      }
+  }
+  
+  $personalData = ReadPersonalData::readUserData($pdo, $user_id);
+
+  foreach ($personalData as $person) {echo "Sveicināti, " . $person->name . " ". $person->surname . "!";} ?></a></li>
   <li><a href="login_page.php"><span class="glyphicon glyphicon-log-in"></span>Iziet</a></li>
 <?php else: ?>
   <li><a href="login_page.php"><span class="glyphicon glyphicon-log-in"></span>Ienākt</a></li>
@@ -103,7 +137,27 @@ $(function(){
 
     <div class="collapse navbar-collapse" id="myNavSecond">
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="news_feed.php">Aktualitātes</a></li>
+      <?php if(isset($_SESSION['id'])): ?>
+
+        <li><a href="welcome_admin.php">Sākumlapa</a></li>
+        <li><a href="users.php">Lietotāji</a></li>
+        <li class="dropdown">
+          <a class="dropdown-toggle dropdown-close" data-toggle="dropdown" href="#">Saturs<span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="characteristics.php">Lapa 1</a></li>
+          </ul>
+        </li>
+          <li class="dropdown">
+          <a class="dropdown-toggle dropdown-close" data-toggle="dropdown" href="#">Darbu saraksts<span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="guidelines.php">Uzdevumi</a></li>
+            <li><a href="video.php">Atbildīgie</a></li>
+          </ul>
+        </li>
+      </ul>
+
+<?php else: ?>
+  <li><a href="news_feed.php">Aktualitātes</a></li>
         <li class="dropdown">
           <a class="dropdown-toggle dropdown-close" data-toggle="dropdown" href="#">Par UDHS<span class="caret"></span></a>
           <ul class="dropdown-menu">
@@ -134,6 +188,9 @@ $(function(){
           </ul>
         </li>
       </ul>
+<?php endif; ?>
+
+        
     </div>
   </div>
 </div>
