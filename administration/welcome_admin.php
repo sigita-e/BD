@@ -56,7 +56,7 @@ class EditData
 	}
 }
 
-require "database.php";
+require_once "database.php";
 
 $products = ReadData::readProductsTable($pdo);
 
@@ -94,6 +94,7 @@ if ( isset ($_POST['delete'])  ) {
 				$error_id = $id;
 			}
 		}
+        
 		else
 		{
 			EditData::editPriceStock($pdo, $newPrice, $id, $newStock);
@@ -109,7 +110,7 @@ if ( isset ($_POST['delete'])  ) {
 }
 
 
-require "header.php";
+require "../header.php";
 ?>
 
 <body>
@@ -181,7 +182,7 @@ require "header.php";
 </main>
 
 <?php
-require "footer.php";
+require_once "../footer.php";
 ?>
 
 </body>

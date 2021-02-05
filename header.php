@@ -20,7 +20,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com"><link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet"> 
 
     <!-- Pielāgots stils -->
-    <link type="text/css" rel="stylesheet" href="main.css" />
+    <link type="text/css" rel="stylesheet" href="/BD/main.css" />
 </head>
 
 
@@ -79,11 +79,11 @@ $(function(){
 <!--Navbar pirmais - autentificēšanās -->
  <div class="navbar navbar-default-first first-nav">
  <div class="container">
-    <ul class="nav navbar-nav navbar-right">
-    <li class="nav-item">
+    <ul class="nav navbar-nav navbar-right welcome-ul pull-right">
+    
 
 <?php if(isset($_SESSION['id'])): ?>
-  <li><a href="login_page.php"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-fill" viewBox="0 0 16 16">
+  <li><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-fill" viewBox="0 0 16 16">
   <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
   </svg><?php
 
@@ -91,17 +91,14 @@ $(function(){
   {
     public $id;
       public $name;
-      public $surname;
-      public $personal_code;
-      public $email;
-  
+      public $surname;  
   }
   
   class ReadPersonalData
   {
     public static function readUserData($pdo, $user_id)
       {
-          $statement = $pdo->prepare("SELECT id, name, surname, personal_code, email FROM users WHERE id = '$user_id'");
+          $statement = $pdo->prepare("SELECT id, name, surname FROM users WHERE id = '$user_id'");
           $statement->execute();
   
           $personalData = $statement->fetchAll(PDO::FETCH_CLASS, "Name");
@@ -111,13 +108,13 @@ $(function(){
   
   $personalData = ReadPersonalData::readUserData($pdo, $user_id);
 
-  foreach ($personalData as $person) {echo "Sveicināti, " . $person->name . " ". $person->surname . "!";} ?></a></li>
-  <li><a href="login_page.php"><span class="glyphicon glyphicon-log-in"></span>Iziet</a></li>
+  foreach ($personalData as $person) {echo "Sveicināti, " . $person->name . "!";} ?></li>
+  <li><a href="../login_page.php"><span class="glyphicon glyphicon-log-in"></span>Iziet</a></li>
 <?php else: ?>
   <li><a href="login_page.php"><span class="glyphicon glyphicon-log-in"></span>Ienākt</a></li>
 <?php endif; ?>
 
-    </li>
+    
   </ul>
 </div>
 </div>
@@ -127,7 +124,7 @@ $(function(){
   <div class="container">
 
   <div class="navbar-header">
-    <li><a class="navbar-brand" href="index.php"><img src="img/Logo_crop2.png" id='Logo'></a></li>
+    <li><a class="navbar-brand" href="/BD/index.php"><img src="/BD/img/Logo_crop2.png" id='Logo'></a></li>
       <button type="button" class="navbar-toggle navbar-toggler-right pull-right" data-toggle="collapse" data-target="#myNavSecond">
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>

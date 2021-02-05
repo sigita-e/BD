@@ -2,7 +2,7 @@
 <?php
 
 // Include db_connect file
-require "database.php";
+require_once "administration/database.php";
 
 // Define variables and initialize with empty values
 $password = $email = "";
@@ -10,7 +10,7 @@ $login_err = $lg_email_err = $lg_password_err = "";
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     //when user clicks Login button
-        require "login.php";
+        require "administration/login.php";
 }
 
 include "header.php";

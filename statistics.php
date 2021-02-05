@@ -15,20 +15,23 @@
 <div class="container">
 
     <div class="row">
-        <h1 class="h1-body-text">Statistikas dati</h1>
+		<div class="col-sm-12">
+        	<h1 class="h1-body-text">Statistikas dati</h1>
 
-        <p class="text-justify">
-        Neatkarīgi no mītnes valsts un citiem faktoriem sindroms ietekmē vidēji ap 5% bērnu un pusaudžu populācijas, savukārt, pieaugušo vidū šis īpatsvars ir robežās no 2,5 – 4,9%.
-        </p>
-        <p class="text-justify">
-        Amerikas Savienotajās Valstīs UDHS bērnu un pusaudžu vidū ir ap 7,8%, pieaugušo vidū – 4,4%.
-        </p> 
-        <p class="text-justify">
-        Latvijā pieaugušajiem šo diagnozi uzstāda tikai ļoti retos gadījumos, tāpēc par sindroma izplatību nav izveidots datu apkopojums, tomēr bērnu un pusaudžu vidū UDHS tiek diagnosticēts 0,3 % gadījumu.
-        </p>
+       		<p class="text-justify">
+        	Neatkarīgi no mītnes valsts un citiem faktoriem sindroms ietekmē vidēji ap 5% bērnu un pusaudžu populācijas, savukārt, pieaugušo vidū šis īpatsvars ir robežās no 2,5 – 4,9%.
+        	</p>
+        	<p class="text-justify">
+        	Amerikas Savienotajās Valstīs UDHS bērnu un pusaudžu vidū ir ap 7,8%, pieaugušo vidū – 4,4%.
+        	</p> 
+        	<p class="text-justify">
+        	Latvijā pieaugušajiem šo diagnozi uzstāda tikai ļoti retos gadījumos, tāpēc par sindroma izplatību nav izveidots datu apkopojums, tomēr bērnu un pusaudžu vidū UDHS tiek diagnosticēts 0,3 % gadījumu.
+        	</p>
+		</div>
     </div>
 
    <div class="row">
+   		<div class="col-sm-12">
 		<table class="table table-striped table-center">
 		<thead>
 			<tr class="info">
@@ -84,6 +87,7 @@
 		</tr>
 		</tbody>
 		</table>
+		</div>
 	</div>
 
 

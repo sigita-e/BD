@@ -17,6 +17,7 @@ VARIABLES
   --link-blue-lighter: #2988bc;
   --link-blue-hover: #23527c;
   --link-gray-hover: #eeeeee;
+  --table-gray-hover: #f0f0f0;
   --link-orange-hover: #ee9564;
   --second-nav-border-bottom: rgba(47,73,110,0.13);
   --carousel-indicator: #cbd1d8;
@@ -53,6 +54,12 @@ nav {
 
 .nav>li {
     display: block;
+}
+
+.welcome-ul {
+    display: flex;
+    align-items: center;
+    color: var(--link-gray-hover);
 }
 
 .first-nav { 
@@ -406,6 +413,7 @@ nav {
     border-radius: 25px;*/
   }
 }
+
 
 .dropdown:hover .dropdown-menu {
     display: block;
@@ -827,6 +835,11 @@ tr.found{
 
 .table-striped > tbody > tr:nth-child(2n+1) > td, .table-striped > tbody > tr:nth-child(2n+1) > th {
    background-color: var(--white);
+}
+
+.table-striped.table-hover>tbody>tr:hover>td, 
+.table-striped.table-hover>tbody>tr:hover>th {
+  background-color: var(--table-gray-hover);
 }
 
 /*

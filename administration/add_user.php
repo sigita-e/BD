@@ -1,7 +1,7 @@
 <?php
 
 // Include db_connect file
-require "database.php";
+require_once "database.php";
 
 // Define variables and initialize with empty values
 $name = $surname = $personal_code = $role = $password = $email = "";
@@ -82,7 +82,7 @@ require "header.php";
 </main>
 
 <?php
-require "footer.php";
+require_once "footer.php";
 ?>
 
 </body>

@@ -18,7 +18,7 @@ if (empty(trim($_POST["password"]))) {
 // Validate credentials
 if (empty($lg_email_err) && empty($lg_password_err)) {
     // Prepare a select statement
-    $sql = "SELECT email, password, role, id FROM users WHERE email = :email";
+    $sql = "SELECT email, password, role_id, id FROM users WHERE email = :email";
 
     if ($stmt = $pdo->prepare($sql)) {
         $stmt->bindParam(":email", $param_email, PDO::PARAM_STR);
@@ -38,10 +38,10 @@ if (empty($lg_email_err) && empty($lg_password_err)) {
                         $_SESSION["email"] = $email;
                         $_SESSION["id"] = $id;
 
-                        // redirect to correct page based on user role
-                        $role = $row["role"];
-                        if($role == 'admin') {
-                            header("location: welcome_admin.php");
+                        // redirect to correct page based on user role_id
+                        $role_id = $row["role_id"];
+                        if($role_id == 1) {
+                            header("location: administration/welcome_admin.php");
                         } //else citas lomas var pievienot
 
                     } else {

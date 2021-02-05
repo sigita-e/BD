@@ -1,6 +1,6 @@
 <?php
 // Include db_connect file
-require "database.php";
+require_once "database.php";
 
 session_start();
 

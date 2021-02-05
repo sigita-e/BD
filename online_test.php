@@ -322,7 +322,7 @@ function renderQuestions(){
 
 	_("test_status").innerHTML = (pages+1)+" no "+questions.length /6 + " lapām";
 
-    testHTML = "<table class=\"table table-striped\"><thead><tr class=\"info\"><th>Simptomi</th><th class=\"center-td\">Nekad</th><th class=\"center-td\">Dažreiz</th><th class=\"center-td\">Bieži</th><th class=\"center-td\">Ļoti bieži</th></tr></thead><tbody>";
+    testHTML = "<table class=\"table table-striped table-hover\"><thead><tr class=\"info\"><th>Simptomi</th><th class=\"center-td\">Nekad</th><th class=\"center-td\">Dažreiz</th><th class=\"center-td\">Bieži</th><th class=\"center-td\">Ļoti bieži</th></tr></thead><tbody>";
 
     for(var i=pos; i<(pos+6); i++) {
         question = questions[i][0];
